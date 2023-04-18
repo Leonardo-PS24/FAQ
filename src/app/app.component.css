@@ -1,0 +1,20 @@
+nav{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+img{
+    height: 50px;
+}
+.question-link{
+    display: flex;
+}
+li{
+    list-style-type: none;
+    padding: 0 15px;
+}
+a{
+    color: black;
+    
+}
