@@ -1,1 +1,16 @@
-<p>pharmacist works! Prova</p>
+<main>
+    <section>
+        <ion-searchbar [debounce]="1000" (ionInput)="handleInput($event)"></ion-searchbar>
+        <ion-accordion-group *ngIf="results.length > 0">
+            <ion-accordion value="first"  *ngFor="let result of results ">
+                <ion-item  slot="header">
+                    <ion-label>{{ result.question }}</ion-label>
+                </ion-item>
+                <div class="ion-padding" slot="content">
+                    <p>{{ result.answer }}</p>
+                </div>
+            </ion-accordion>
+        </ion-accordion-group>
+
+    </section>
+</main>
