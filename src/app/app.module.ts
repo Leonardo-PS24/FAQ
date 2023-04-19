@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { PharmacistComponent } from './component/pharmacist/pharmacist.component';
 import { TechnicanComponent } from './component/technican/technican.component';
 import { HomeComponent } from './component/home/home.component';
+import { IonicModule } from '@ionic/angular';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HomeComponent } from './component/home/home.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    IonicModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

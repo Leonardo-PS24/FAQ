@@ -1,12 +1,25 @@
-<nav>
-  <img src="https://www.pharmaself24.com/wp-content/uploads/2020/11/logo-pharmaself24.png" alt="">
+  <ion-header>
+    <ion-toolbar>
 
-  <div class="question-link">
-    <a routerLink="/" style="margin-left: 10px;">Home</a>
-    <a routerLink="/pharmacist"style="margin-left: 10px;">Pharmacist</a>
-    <a routerLink="/technican"style="margin-left: 10px;">Technican</a>
-  </div>
-</nav>
+      <img src="https://www.pharmaself24.com/wp-content/uploads/2020/11/logo-pharmaself24.png" alt="">
+
+      <ion-title>
+        <ion-accordion-group>
+          <ion-accordion value="first">
+            <ion-item slot="header" color="light">
+              <ion-label>FAQ</ion-label>
+            </ion-item>
+            <div class="ion-padding" slot="content">
+              <a routerLink="/pharmacist">Pharmacist</a>
+            </div>
+            <div class="ion-padding" slot="content">
+              <a routerLink="/technican">Technican</a>
+            </div>
+          </ion-accordion>
+        </ion-accordion-group>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
 
 <router-outlet></router-outlet>
 
