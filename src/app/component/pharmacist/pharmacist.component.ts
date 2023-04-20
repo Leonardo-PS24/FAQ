@@ -12,10 +12,8 @@ export class PharmacistComponent {
     {
       "id": 1,
       "question": "What types of medicines are available in the vending machine?",
-      "answer": "The medicine vending machine can offer a wide range of medicines, including over-the-counter and prescription medicines. Additionally, the vending machine can also be used for the retrieval of pre-ordered medicines. Therefore, in practice, any type of medicine can be placed inside the vending machine, depending on the needs and requests of the users. However, it is important to note that the availability of specific medicines may vary depending on the vending machine provider and local laws and regulations regarding the distribution of medicines.",
-      "expanded": false
-    }
-    ,
+      "answer": "The medicine vending machine can offer a wide range of medicines, including over-the-counter and prescription medicines. Additionally, the vending machine can also be used for the retrieval of pre-ordered medicines. Therefore, in practice, any type of medicine can be placed inside the vending machine, depending on the needs and requests of the users. However, it is important to note that the availability of specific medicines may vary depending on the vending machine provider and local laws and regulations regarding the distribution of medicines."
+    },
     {
       "id": 2,
       "question": "What are the opening hours of the vending machine?",
@@ -72,9 +70,9 @@ export class PharmacistComponent {
       },
     {
         "id": 11,
-        "question": "11. Wrong product dispensed?",
-        "answer": "In case of dispensing the wrong product, the patient can report the problem to the vending machine by selecting the 'wrong product' option on the vending machine screen. The vending machine will put the wrong product in a separate area and notify the pharmacist through the app. The pharmacist will then be able to respond immediately through the application to verify the problem and provide assistance to the patient. The pharmacist can respond to the patient's request through the app, offering assistance and suggesting necessary actions to resolve the problem, such as replacing the wrong product or correcting the error. This way, it can be ensured that the patient receives the correct medication and any health or safety issues can be avoided.",
-        "expanded": false
+        "question": "Wrong product dispensed?",
+        "answer": "In case of dispensing the wrong product, the patient can report the problem to the vending machine by selecting the 'wrong product' option on the vending machine screen. The vending machine will put the wrong product in a separate area and notify the pharmacist through the app. The pharmacist will then be able to respond immediately through the application to verify the problem and provide assistance to the patient. The pharmacist can respond to the patient's request through the app, offering assistance and suggesting necessary actions to resolve the problem, such as replacing the wrong product or correcting the error. This way, it can be ensured that the patient receives the correct medication and any health or safety issues can be avoided."
+            
     }
     
 ];
