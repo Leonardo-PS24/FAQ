@@ -55,4 +55,5 @@ export class TechnicanComponent {
     this.results = this.data.filter(d => d.question.toLowerCase().indexOf(query) > -1 || d.answer.toLowerCase().indexOf(query) > -1);
 
   }
+  
 }
