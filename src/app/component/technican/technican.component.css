@@ -1,0 +1,22 @@
+.content{
+    max-width: 1000px;
+    margin: auto;
+}
+.searchbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ion-searchbar{
+    width: 500px;
+}
+ img{
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+ }
+ .accordion-container {
+    height: 300px;
+    overflow-y: scroll;
+  }
+  

@@ -1,17 +1,24 @@
 <main>
     <section>
-        <ion-searchbar [debounce]="1000" (ionInput)="handleInput($event)"></ion-searchbar>
-        <ion-accordion-group *ngIf="results.length > 0">
-            <ion-accordion value="first"  *ngFor="let result of results ">
-                <ion-item  slot="header">
-                    <ion-label>{{ result.question }}</ion-label>
-                </ion-item>
-                <div class="ion-padding" slot="content">
-                    <p>{{ result.answer }}</p>
-                </div>
-            </ion-accordion>
-        </ion-accordion-group>
-
+        <img src="https://www.pharmaself24.com/wp-content/uploads/2020/11/automated-pharmacy-dispensing-systems.jpg" alt="">
+    </section>
+    <section class="content">
+        <div class="searchbar">
+            <div><h1>Technican</h1></div>
+            <ion-searchbar [debounce]="1000" (ionInput)="handleInput($event)"></ion-searchbar>
+        </div>
+        <div class="accordion-container">
+            <ion-accordion-group *ngIf="results.length > 0" class="ion-padding">
+                <ion-accordion value="first"  *ngFor="let result of results ">
+                    <ion-item  slot="header">
+                        <ion-label>{{ result.question }}</ion-label>
+                    </ion-item>
+                    <div class="ion-padding" slot="content">
+                        <p>{{ result.answer }}</p>
+                    </div>
+                </ion-accordion>
+            </ion-accordion-group>
+        </div>
     </section>
 </main>
 

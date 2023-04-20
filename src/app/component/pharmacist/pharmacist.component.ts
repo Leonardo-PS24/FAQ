@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-pharmacist',
   templateUrl: './pharmacist.component.html',
   styleUrls: ['./pharmacist.component.css']
+
 })
 export class PharmacistComponent {
   public data = [
@@ -59,7 +61,7 @@ export class PharmacistComponent {
     },
     {
         "id": 11,
-        "question": "11. Wrong product dispensed?",
+        "question": "Wrong product dispensed?",
         "answer": "In case of dispensing the wrong product, the patient can report the problem to the vending machine by selecting the 'wrong product' option on the vending machine screen. The vending machine will put the wrong product in a separate area and notify the pharmacist through the app. The pharmacist will then be able to respond immediately through the application to verify the problem and provide assistance to the patient. The pharmacist can respond to the patient's request through the app, offering assistance and suggesting necessary actions to resolve the problem, such as replacing the wrong product or correcting the error. This way, it can be ensured that the patient receives the correct medication and any health or safety issues can be avoided."
             
     }
@@ -71,4 +73,6 @@ export class PharmacistComponent {
     this.results = this.data.filter(d => d.question.toLowerCase().indexOf(query) > -1 || d.answer.toLowerCase().indexOf(query) > -1);
 
   }
+
 }
+
