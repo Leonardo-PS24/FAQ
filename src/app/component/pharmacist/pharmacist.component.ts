@@ -35,13 +35,17 @@ export class PharmacistComponent {
     const x = document.getElementById("nothing");
     
     // A variable query is declared and initialized with the lowercased value of the input target
-    const query = (event.target as HTMLInputElement)?.value?.toLowerCase();
-    
-    // The results property is assigned a filtered array based on whether the question or answer property of each object in data contains the query string
-    this.results = data.filter(d => d.question.toLowerCase().indexOf(query) > -1 || d.answer.toLowerCase().indexOf(query) > -1);
-  }
-}
+    // A variable query is declared and initialized with the lowercased value of the input target, split into separate keywords
+const query = (event.target as HTMLInputElement)?.value?.toLowerCase().split(' ');
+
+// The results property is assigned a filtered array based on whether all the keywords in the query string are found in the question or answer property of each object in data
+this.results = data.filter(d => {
+  return query.every(keyword => {
+    return d.question.toLowerCase().includes(keyword) || d.answer.toLowerCase().includes(keyword);
+  });
+});
+
   
-
-
+}
+}
 
