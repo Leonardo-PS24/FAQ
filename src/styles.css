@@ -54,9 +54,15 @@ height: 300px;
 object-fit: cover;
 width: 100%;
 }
-
+.accordion{
+    border-bottom: 1px solid #444444;
+    line-height: 32px;
+   
+}
 /* Set maximum height and add margin for accordion container */
 .accordion-container {
+    line-height: 32px;
+    width: 90%;
 max-height: 500px;
 margin: 50px 0;
 height: auto;
@@ -65,10 +71,12 @@ overflow-y: scroll;
 
 /* Set display style and border for accordion header */
 .accordion-header{
+    
+    line-height: 32px;
 display: flex;
 align-items: center;
 justify-content: space-between;
-border-bottom: 1px solid gray;
+padding:16px;
 }
 
 /* Set style for error messages */

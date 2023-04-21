@@ -1,39 +1,31 @@
-<!-- This is an HTML code for a FAQ search page. -->
-<main>
+<main> <!-- Begin main section -->
   <section>
-    <!-- Displaying an image -->
-    <img src="https://cdn.discordapp.com/attachments/1097864939072393389/1098878710251262032/hero.png" alt="">
-    <!-- A search bar to search for FAQs -->
-    <div class="searchbar">
-      <!-- Title of the FAQs section -->
-      <div><b> Frequently Asked Questions </b></div>
-      <!-- A category of the FAQs section -->
-      <div class="tipology"><span>PHAMRACIST</span></div>
-      <!-- Input search box -->
-      <input type="search" placeholder="Search" (input)="handleInput($event)" class="search">
+    <img src="https://cdn.discordapp.com/attachments/1097864939072393389/1098878710251262032/hero.png" alt=""> <!-- Display hero image -->
+    <div class="searchbar"> <!-- Begin search bar -->
+      <div><b> Frequently Asked Questions </b></div> <!-- Display title for frequently asked questions -->
+      <div class="tipology"><span>PHARMACIST</span></div> <!-- Display dropdown to select specific topic -->
+      <input type="search" placeholder="Search" (input)="handleInput($event)" class="search"> <!-- Search input field -->
     </div>
+    
   </section>
-  <!-- If no search results are found, display an error message -->
-  <div *ngIf="showDiv()" class="error">No results found</div>
+  <div class="page-wrapper">
+  <div *ngIf="showDiv()" class="error">No results found</div> <!-- Display error message if no search results are found -->
   <section class="content">
-    <!-- Displaying the FAQs -->
-    <div class="accordion-container">
-      <!-- If there are search results, display them -->
-      <div *ngIf="results.length > 0" class="ion-padding">
-        <!-- Display each search result as an accordion -->
-        <div *ngFor="let result of results " class="result">
-          <!-- Accordion header -->
-          <div class="accordion-header" (click)="result.expanded = !result.expanded">
-            <div><h3>{{ result.question }}</h3></div> 
-            <!-- Display an add or remove icon based on whether the accordion is expanded or not -->
-            <div><ion-icon *ngIf="!result.expanded" name="add-outline"></ion-icon><ion-icon *ngIf="result.expanded" name="remove-outline"></ion-icon></div>    
+    <div class="accordion-container"> <!-- Begin accordion container -->
+      <div *ngIf="results.length > 0" class="ion-padding"> <!-- Display accordion results if search has results -->
+        <div *ngFor="let result of results " class="result"> <!-- Loop through each result and display in an accordion -->
+          <div class="accordion"> <!-- Begin accordion -->
+          <div class="accordion-header" (click)="result.expanded = !result.expanded"> <!-- Display accordion header and expand/collapse on click -->
+            <div><h3>{{ result.question }}</h3></div> <!-- Display question -->
+            <div><ion-icon *ngIf="!result.expanded" name="add-outline"></ion-icon><ion-icon *ngIf="result.expanded" name="remove-outline"></ion-icon></div> <!-- Display "+" icon if accordion is collapsed, "-" icon if accordion is expanded -->
           </div>
-          <!-- Accordion content -->
-          <div class="accordion-content" *ngIf="result.expanded">
-            <p>{{ result.answer }}</p> 
+          <div class="accordion-content" *ngIf="result.expanded"> <!-- Display answer if accordion is expanded -->
+            <p>{{ result.answer }}</p> <!-- Display answer -->
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </div> <!-- End accordion container -->
   </section>
-</main>
+</div>
+</main> <!-- End main section -->
