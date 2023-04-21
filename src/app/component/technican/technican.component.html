@@ -3,17 +3,18 @@
     <img src="https://cdn.discordapp.com/attachments/1097864939072393389/1098878710251262032/hero.png" alt="">
     <div class="searchbar">
       <div><b> Frequently Asked Questions </b></div>
-      <div class="tipology"><span>Technican</span></div>
+      <div class="tipology"><span>Technician</span></div>
       <input type="search" placeholder="Search" (input)="handleInput($event)" class="search">
     </div>
   </section>
+  <div *ngIf="mostraDiv()" class="error">No results found</div>
   <section class="content">
     <div class="accordion-container">
       <div *ngIf="results.length > 0" class="ion-padding">
         <div *ngFor="let result of results " class="result">
           <div class="accordion-header" (click)="result.expanded = !result.expanded">
             <div><h3>{{ result.question }}</h3></div> 
-            <div><ion-icon *ngIf="!result.expanded" name="add-outline"></ion-icon><ion-icon *ngIf="result.expanded" name="remove-outline"></ion-icon></div>
+            <div><ion-icon *ngIf="!result.expanded" name="add-outline"></ion-icon><ion-icon *ngIf="result.expanded" name="remove-outline"></ion-icon></div>    
           </div>
           <div class="accordion-content" *ngIf="result.expanded">
             <p>{{ result.answer }}</p> 
@@ -23,5 +24,4 @@
     </div>
   </section>
 </main>
-
  

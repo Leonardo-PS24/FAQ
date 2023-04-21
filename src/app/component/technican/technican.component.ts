@@ -15,14 +15,21 @@ interface Question {
 export class TechnicanComponent {
   
 public results = [...data];
-messaggio(){
-  window.alert(this.results[0].expanded);
+
+mostraDiv(){
+  if (this.results.length < 1) {
+    return true;
+  } else {
+    return false;
+  }
+
 }
   handleInput(event: Event) {
-   console.log(this.results[0].expanded);
-    const query = (event.target as HTMLInputElement)?.value?.toLowerCase();
-    this.results = data.filter(d => d.question.toLowerCase().indexOf(query) > -1 || d.answer.toLowerCase().indexOf(query) > -1);
+    const x = document.getElementById("nothing");
+const query = (event.target as HTMLInputElement)?.value?.toLowerCase();
+this.results = data.filter(d => d.question.toLowerCase().indexOf(query) > -1 || d.answer.toLowerCase().indexOf(query) > -1);
 
+    
   }
 
 }

@@ -42,3 +42,8 @@ img{
     justify-content: space-between;
     border-bottom: 1px solid gray;
 }
+.error{
+    font-size: 40px;
+    text-align: center;
+    padding: 80px;
+}
