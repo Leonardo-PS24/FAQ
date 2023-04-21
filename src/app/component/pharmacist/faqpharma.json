@@ -37,12 +37,6 @@
       "expanded":false
     },
     {
-      "id": 7,
-      "question": "What are the technical requirements for the installation of the medicine vending machine?",
-      "answer": "In general, the technical requirements for the installation of a medicine vending machine include: a dedicated space to place the vending machine, which is adequately protected from the weather, secure, and accessible 24/7; a constant 24/",
-      "expanded":false
-    },
-    {
         "id": 8,
         "question": "What are the technical requirements for installing a medication vending machine?",
         "answer": "In general, the technical requirements for installing a medication vending machine include: a suitable space to place the machine, which is adequately protected from the elements, secure, and accessible 24/7; a constant 24/7 power source for the vending machine to function; an internet connection for managing medication reservation and distribution operations; and adequate security and monitoring system to prevent potential intrusions or technical problems. Additionally, a specialized technician will be needed to install, configure, and test the vending machine.",
