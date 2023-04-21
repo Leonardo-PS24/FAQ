@@ -1,25 +1,45 @@
+<!-- This is an HTML code that defines the header section of a web page using the Ionic framework. -->
+
+<!-- The <ion-header> tag indicates the beginning of the header section. -->
   <ion-header>
+    
+    <!-- The <nav> tag defines a navigation bar. -->
     <nav>
+      
+      <!-- The first <div> tag contains an image that serves as a logo for the web page. -->
       <div>
         <img src="https://www.pharmaself24.com/wp-content/uploads/2020/11/logo-pharmaself24.png" routerLink="/" alt="">
       </div>
+
+      <!-- The second <div> tag contains an accordion menu with two links. -->
       <div>
         <ion-accordion-group>
+      
+          <!-- The <ion-accordion> tag defines an accordion menu item. -->
           <ion-accordion value="first">
+      
+            <!-- The <ion-item> tag defines a list item with a label. -->
             <ion-item slot="header" color="light">
               <ion-label>FAQ</ion-label>
             </ion-item>
+      
+            <!-- The first <div> tag contains a link to a pharmacist page. -->
             <div class="ion-padding" slot="content">
               <a routerLink="/pharmacist">Pharmacist</a>
             </div>
+      
+            <!-- The second <div> tag contains a link to a technician page. -->
             <div class="ion-padding" slot="content">
               <a routerLink="/technican">Technican</a>
             </div>
+      
           </ion-accordion>
+      
         </ion-accordion-group>
       </div>
     </nav>
   </ion-header>
 
-<router-outlet></router-outlet>
+  <!-- The </ion-header> tag indicates the end of the header section. -->
+  <router-outlet></router-outlet>
 

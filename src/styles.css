@@ -1,59 +1,84 @@
 /* You can add global styles to this file, and also import other style files */
-* {font-family: 'Lato', sans-serif;}
-.content{
-    max-width: 1000px;
-    margin: auto;
-}
-.searchbar{
-    position: absolute;
-    top: 100px;
-    left: 100px;
-    margin: 25px 0;
-}
-b{
-    font-size: 46px;
-    color: #444444;
-    font-weight: 900;
-}
-.tipology{
-    font-size: 16px;
-    font-weight: 400;
-    padding-top: 15px;
-    color: #444444;
-}
-.search{
-    margin: 50px 0;
-    width: 300px;
-    height: 35px;
-    border-radius: 8px;
-    border: 2px solid #00945E;
-}
-.search:focus {
-    border-color:  #00945E;
-  }
 
+/* Set font family for all elements */
+*{
+    font-family: 'Lato', sans-serif;
+}
+
+/* Center content within a max-width of 1000px */
+.content{
+max-width: 1000px;
+margin: auto;
+}
+
+/* Set position of searchbar and add margin */
+.searchbar{
+position: absolute;
+top: 100px;
+left: 100px;
+margin: 25px 0;
+}
+
+/* Set style for bolded text */
+b{
+font-size: 46px;
+color: #444444;
+font-weight: 900;
+}
+
+/* Set style for text under tipology class */
+.tipology{
+font-size: 16px;
+font-weight: 400;
+padding-top: 15px;
+color: #444444;
+}
+
+/* Set style for search bar */
+.search{
+margin: 50px 0;
+width: 300px;
+height: 35px;
+border-radius: 8px;
+border: 2px solid #00945E;
+}
+
+/* Set border color when search bar is in focus */
+.search:focus {
+border-color: #00945E;
+}
+
+/* Set style for all images */
 img{
-    height: 300px;
-    object-fit: cover;
-    width: 100%;
+height: 300px;
+object-fit: cover;
+width: 100%;
 }
+
+/* Set maximum height and add margin for accordion container */
 .accordion-container {
-    max-height: 500px;
-    margin: 50px 0;
-    height: auto;
-    overflow-y: scroll;
+max-height: 500px;
+margin: 50px 0;
+height: auto;
+overflow-y: scroll;
 }
+
+/* Set display style and border for accordion header */
 .accordion-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid gray;
+display: flex;
+align-items: center;
+justify-content: space-between;
+border-bottom: 1px solid gray;
 }
+
+/* Set style for error messages */
 .error{
-    font-size: 40px;
-    text-align: center;
-    padding: 80px;
+font-size: 40px;
+text-align: center;
+padding: 80px;
 }
+
+/* Hide scrollbar */
 ::-webkit-scrollbar {
-  display: none;
+display: none;
 }

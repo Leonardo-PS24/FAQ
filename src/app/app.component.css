@@ -1,13 +1,15 @@
-
+/* Set the height of the ion-header element to 50 pixels */
 ion-header{
-    height: 50px;
+height: 50px;
 }
 
+/* Make the nav element a flex container */
 nav{
-    display: flex;
+display: flex;
 }
 
+/* Add 5 pixels of padding to the image element and set its height to 50 pixels */
 img{
-    padding: 5px;
-    height: 50px;
+padding: 5px;
+height: 50px;
 }
