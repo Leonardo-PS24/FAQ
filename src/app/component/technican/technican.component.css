@@ -9,13 +9,15 @@
     margin: 25px 0;
 }
 b{
-    font-size: 35px;
-    color: #00945E;
+    font-size: 46px;
+    color: #444444;
+    font-weight: 900;
 }
 .tipology{
-    font-size: 20px;
+    font-size: 16px;
+    font-weight: 400;
     padding-top: 15px;
-    color: #00945E;
+    color: #444444;
 }
 .search{
     margin: 50px 0;
@@ -24,6 +26,9 @@ b{
     border-radius: 8px;
     border: 2px solid #00945E;
 }
+.search:focus {
+    border-color:  #00945E;
+  }
 
 img{
     height: 300px;
