@@ -54,3 +54,6 @@ img{
     text-align: center;
     padding: 80px;
 }
+::-webkit-scrollbar {
+  display: none;
+}
