@@ -24,7 +24,6 @@ mostraDiv(){
   } else {
     return false;
   }
-
 }
   handleInput(event: Event) {
     const x = document.getElementById("nothing");
