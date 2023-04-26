@@ -4,7 +4,9 @@
     <div class="searchbar"> <!-- Begin search bar -->
       <div><b> Frequently Asked Questions </b></div> <!-- Display title for frequently asked questions -->
       <div class="tipology"><span>PHARMACIST</span></div> <!-- Display dropdown to select specific topic -->
-      <input type="search" placeholder="Search" (input)="handleInput($event)" class="search"> <!-- Search input field -->
+      <div class="search-container">
+        <input type="search" placeholder="Search" (input)="handleInput($event)" class="search" >
+      </div>
     </div>
     
   </section>
