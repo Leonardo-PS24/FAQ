@@ -5,6 +5,11 @@
     "expanded": false
   },
   {
+    "question": "How is the initial calibration of the Pharmaself24 performed?",
+    "answer": "The initial calibration of the automatic medicine dispenser machine is performed automatically. After running a code that terminates all ongoing processes, the machine is reset. It sets its starting point on the x and y axis using sensors and becomes operational. In case of problems with the automatic calibration, it can also be done manually.",
+    "expanded":false
+  },
+  {
     "question": "How can I access the control panel of the Pharmaself24 dispenser?",
     "answer": "The control panel of the Pharmaself24 dispenser can be accessed by authorized personnel using a secure login and password. The specific steps to access the control panel will depend on the model and software version of the dispenser.",
     "expanded": false
@@ -50,7 +55,4 @@
 "answer": "The monitoring and fault detection methods for the Pharmaself24 dispenser may include real-time monitoring ofthe dispenser's performance, periodic system checks and maintenance, and automated fault detection systems that can identify and report malfunctions or errors. The specific methods used will depend on the model and software version of the dispenser, as well as the manufacturer's policies and procedures.",
 "expanded": false
 }
-
-
-
 ]
