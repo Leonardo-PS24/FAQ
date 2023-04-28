@@ -3,13 +3,19 @@
 /* Set font family for all elements */
 *{
     font-family: 'Lato', sans-serif;
+    
 }
-
+body{
+    background-color: #c7c7c7;
+}
 /* Center content within a max-width of 1000px */
 .content{
 max-width: 1000px;
 margin: auto;
+background-color: white;
+height: calc(100vh - 500px);
 }
+
 
 /* Set position of searchbar and add margin */
 .searchbar{
@@ -60,30 +66,31 @@ height: 300px;
 object-fit: cover;
 width: 100%;
 }
-.accordion{
+.accordion-container {
+    width: 90%;
+    margin: 50px auto;
+    max-height: calc(100vh - 500px); /* set the max height according to the screen*/
+    overflow-y: auto; /* add scrollbar if neccesary*/
+  }
+  
+  .accordion {
     border-bottom: 1px solid #444444;
     line-height: 32px;
-   
-}
-/* Set maximum height and add margin for accordion container */
-.accordion-container {
-    line-height: 32px;
-    width: 90%;
-max-height: 500px;
-margin: 50px 0;
-height: auto;
-overflow-y: scroll;
-}
+  }
+  
+  .accordion-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    cursor: pointer; /* aggiungi il puntatore del mouse quando si passa sopra l'intestazione dell'accordion */
+  }
+  
+  .accordion-content {
+    padding: 16px;
+  }
 
-/* Set display style and border for accordion header */
-.accordion-header{
     
-    line-height: 32px;
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding:16px;
-}
 
 /* Set style for error messages */
 .error{
@@ -95,4 +102,84 @@ padding: 80px;
 /* Hide scrollbar */
 ::-webkit-scrollbar {
 display: none;
+}
+/* Set position for the perfect scroll bar*/
+.perfect-scrollbar {
+  position: relative;
+  overflow: hidden;
+}
+
+.ps {
+  -ms-touch-action: none;
+  touch-action: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.ps__rail-x,
+.ps__rail-y {
+  position: absolute;
+  display: none;
+  opacity: 0.6;
+  -webkit-transition: opacity linear 0.2s;
+  -moz-transition: opacity linear 0.2s;
+  -o-transition: opacity linear 0.2s;
+  transition: opacity linear 0.2s;
+}
+
+.ps__rail-x {
+  bottom: 0;
+  height: 15px;
+}
+
+.ps__rail-y {
+  width: 15px;
+  top: 0;
+  right: 0;
+}
+
+.ps__thumb-x,
+.ps__thumb-y {
+  position: absolute;
+  background-color: #bbb;
+  border-radius: 6px;
+  -webkit-transition: background-color linear 0.2s;
+  -moz-transition: background-color linear 0.2s;
+  -o-transition: background-color linear 0.2s;
+  transition: background-color linear 0.2s;
+}
+
+.ps__thumb-x {
+  height: 100%;
+}
+
+.ps__thumb-y {
+  width: 100%;
+}
+
+.ps--active-x > .ps__rail-x,
+.ps--active-y > .ps__rail-y {
+  display: block;
+  opacity: 0.6;
+}
+
+.ps--active-x > .ps__rail-x:hover,
+.ps--active-y > .ps__rail-y:hover {
+  opacity: 0.9;
+}
+
+.ps--dragging .ps__thumb-x,
+.ps--dragging .ps__thumb-y {
+  background-color: #999;
+}
+/* Create a bottom bar to see how the accordion reacts*/
+.bottom-bar {
+  background-color: #00945E;
+  color: white;
+  padding: 5px;
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:60px;   /* Height of the footer */
+ 
 }

@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import data from './faqtech.json';
+import PerfectScrollbar from 'perfect-scrollbar';
+
 
 interface Question {
   question: string;
@@ -14,7 +16,12 @@ interface Question {
 })
 
 export class TechnicanComponent {
-
+  //shows the PerfectScrollbar
+  @ViewChild('content') content!: ElementRef;
+  ngAfterViewInit() {
+    const ps = new PerfectScrollbar(this.content.nativeElement);
+  }
+  
   // A public property results is declared and initialized with an array of data
   public results = [...data];
   
@@ -30,19 +37,19 @@ export class TechnicanComponent {
   // A method handleInput is declared which takes an event as input
   handleInput(event: Event) {
   
-    // A variable x is declared and initialized with an HTML element using its ID
-    const x = document.getElementById("nothing");
+  // A variable x is declared and initialized with an HTML element using its ID
+  const x = document.getElementById("nothing");
     
-    // A variable query is declared and initialized with the lowercased value of the input target, split into separate keywords
-const query = (event.target as HTMLInputElement)?.value?.toLowerCase().split(' ');
+  // A variable query is declared and initialized with the lowercased value of the input target, split into separate keywords
+  const query = (event.target as HTMLInputElement)?.value?.toLowerCase().split(' ');
 
-// The results property is assigned a filtered array based on whether all the keywords in the query string are found in the question or answer property of each object in data
-this.results = data.filter(d => {
-  return query.every(keyword => {
-    return d.question.toLowerCase().includes(keyword) || d.answer.toLowerCase().includes(keyword);
+  // The results property is assigned a filtered array based on whether all the keywords in the query string are found in the question or answer property of each object in data
+  this.results = data.filter(d => {
+    return query.every(keyword => {
+      return d.question.toLowerCase().includes(keyword) || d.answer.toLowerCase().includes(keyword);
+    });
   });
-});
 
-  
-}
+    
+  }
 }

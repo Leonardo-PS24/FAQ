@@ -9,11 +9,12 @@
       </div>
     </div>
     
-  </section>
-  <div class="page-wrapper">
+  </section >
+  
   <div *ngIf="showDiv()" class="error">No results found</div> <!-- Display error message if no search results are found -->
   <section class="content">
     <div class="accordion-container"> <!-- Begin accordion container -->
+      <div class="content perfect-scrollbar ps" #content>
       <div *ngIf="results.length > 0" class="ion-padding"> <!-- Display accordion results if search has results -->
         <div *ngFor="let result of results " class="result"> <!-- Loop through each result and display in an accordion -->
           <div class="accordion"> <!-- Begin accordion -->
@@ -28,6 +29,10 @@
       </div>
       </div>
     </div> <!-- End accordion container -->
+  </div>
   </section>
-</div>
+
 </main> <!-- End main section -->
+<footer class="bottom-bar">
+  <p>This is the bottom bar.</p>
+</footer>
